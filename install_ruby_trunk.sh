@@ -4,6 +4,7 @@ set -o errexit
 
 INSTALL_DIR=/tmp/install
 
+mkdir -p /tmp/install
 cd ${INSTALL_DIR} && git clone git://github.com/ruby/ruby.git
 cd ${INSTALL_DIR} && autoconf
 cd ${INSTALL_DIR} && ./configure --prefix=/home/jleo3/.rubies/ruby-2.5.0
