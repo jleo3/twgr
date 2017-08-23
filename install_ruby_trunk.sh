@@ -12,4 +12,4 @@ cd ${INSTALL_DIR} && make
 cd ${INSTALL_DIR} && make check
 cd ${INSTALL_DIR} && sudo make install
 
-rm -rf /tmp/install
+rm -rf ${INSTALL_DIR}
