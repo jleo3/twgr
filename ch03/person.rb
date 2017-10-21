@@ -1,4 +1,7 @@
 class Person
+  def species
+    "Homo sapiens"
+  end
   def set_name(string)
     puts "Setting person's name..."
     @name = string
@@ -8,6 +11,10 @@ class Person
     @name
   end
 end
+class Rubyist < Person
+end
+david = Rubyist.new
+puts david.species
 
 joe = Person.new
 joe.set_name("Joe")
