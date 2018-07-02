@@ -1,5 +1,5 @@
 def sum_of_parts(arr)
-  sum = 0
-  arr.size.times { |i| sum = sum + arr[i] }
-  sum
+  arr.inject(:+)
 end
+
+puts sum_of_parts [1,3,5]
