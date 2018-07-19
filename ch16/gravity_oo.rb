@@ -12,6 +12,14 @@ class GravitationalForce
   end
 end
 
+class EarthGForce < GravitationalForce
+  EARTH_MASS = 5.976*10**24
+
+  def initialize(mass, distance)
+    super(EARTH_MASS, mass, distance)
+  end
+end
+
 mars_mass = 6.39 * 10**23
 earth_mass = 5.976*10**24
 distance_earth_mars = 5.46 * 10**10
@@ -23,3 +31,5 @@ distance_earth_jupiter = 5.88 * 10**11
 f = GravitationalForce.new(earth_mass, jupiter_mass, distance_earth_jupiter)
 puts f.calculate
 
+f = EarthGForce.new(mars_mass, distance_earth_mars)
+puts f.calculate
