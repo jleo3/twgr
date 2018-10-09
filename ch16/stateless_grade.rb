@@ -20,5 +20,4 @@ physics_grade = Grade.calculate_grade([78,92,90])
 chemistry_grade = Grade.calculate_grade([90,80,88])
 biology_grade = Grade.calculate_grade([99,90,98])
 
-rc = ReportCard.new("Joe", physics_grade, chemistry_grade, biology_grade)
-rc.issue
+ReportCard.issue("Joe", physics_grade, chemistry_grade, biology_grade)

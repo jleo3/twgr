@@ -1,11 +1,7 @@
 require_relative 'report_card'
 
 class Grade
-  attr_accessor :name, :letter
-
-  def initialize(name)
-    @name = name
-  end
+  attr_reader :letter
 
   def calculate_grade(scores)
     case scores.sum / scores.size
@@ -22,12 +18,13 @@ class Grade
     end
   end
 end
-physics_grade = Grade.new("Joe")
+
+physics_grade = Grade.new
 physics_grade.calculate_grade([78,92,90])
-chemistry_grade = Grade.new("Joe")
+chemistry_grade = Grade.new
 chemistry_grade.calculate_grade([90,80,88])
-biology_grade = Grade.new("Joe")
+biology_grade = Grade.new
 biology_grade.calculate_grade([99,90,98])
 
-rc = ReportCard.new(physics_grade, chemistry_grade, biology_grade)
+rc = ReportCard.new("Joe", physics_grade, chemistry_grade, biology_grade)
 rc.issue

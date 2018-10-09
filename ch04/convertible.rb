@@ -13,3 +13,4 @@ end
 
 puts Thermometer.c2f(100)
 puts Thermometer.f2c(212)
+puts Thermometer.ancestors

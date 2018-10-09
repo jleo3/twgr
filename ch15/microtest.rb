@@ -5,7 +5,7 @@ class MicroTest
       def self.method_added(m)
         if m =~ /^test/
           obj = self.new
-          if self.instance_methods.include?(:setup)
+          if obj.methods.include?(:setup)
             obj.setup
           end
           obj.send(m)

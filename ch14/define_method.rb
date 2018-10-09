@@ -12,9 +12,9 @@ class Name
   end
 
   def method_missing(m, args, &block)
-    if m.to_s.include?("_name=")
+    if m.to_s.end_with?("_name=")
       self.class.send(:define_method, m) do |args|
-        instance_variable_set(:"@#{m.to_s.chop}", args)
+        instance_variable_set("@#{m.to_s.chop}", args)
       end
       send(m, args)
     else
