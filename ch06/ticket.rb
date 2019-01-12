@@ -10,9 +10,9 @@ class Ticket
   end
 
 end
-ticket1 = Ticket.new("Town Hall", "07/08/18")
-ticket2 = Ticket.new("Conference Center", "07/08/18")
-ticket3 = Ticket.new("Town Hall", "08/09/18")
+ticket1 = Ticket.new("Town Hall", "2018-07-08")
+ticket2 = Ticket.new("Conference Center", "2018-07-08")
+ticket3 = Ticket.new("Town Hall", "2018-08-09")
 puts "ticket1 is for an event at: #{ticket1.venue}."
 
 case ticket1
