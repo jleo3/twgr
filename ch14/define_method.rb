@@ -29,4 +29,4 @@ n.to_s
 n.middle_name = "Phillip"
 puts n.instance_variables
 n.to_s
-n.initials = "JPL"
+# n.initials = "JPL" # uncommenting this line will raise a RuntimeError

@@ -3,7 +3,6 @@ require 'irb'
 def divide_by_user_input
   print "Enter a number: "
   n = gets.to_i
-  binding.irb
   begin
     result = 100 / n
   rescue ZeroDivisionError

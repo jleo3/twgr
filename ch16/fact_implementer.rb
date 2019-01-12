@@ -5,5 +5,5 @@ RubyVM::InstructionSequence.compile_option = {
 
 require_relative 'fib_tail_recursive'
 
-puts fibonacci(1000000)
+puts fibonacci(100)
 

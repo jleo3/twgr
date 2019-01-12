@@ -14,4 +14,4 @@ the_unseen.rating = 4.5
 
 the_unseen.freeze
 the_unseen.artist.frozen?
-the_unseen.artist = "Madlib"
+#the_unseen.artist = "Madlib" # uncommenting this line will raise a FrozenError

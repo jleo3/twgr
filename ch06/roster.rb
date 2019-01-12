@@ -20,12 +20,12 @@ if tourney_roster1.players.first.position == "Forward"
 end
 
 tourney_roster2 = Roster.new
+=begin The following code doesn't work because tourney_roster2 has no players
 if tourney_roster2.players.first.position == "Forward"
   puts "Forward: #{tourney_roster2.players.first.name}"
 end
+=end
 
 if tourney_roster2.players&.first&.position == "Forward"
   puts "Forward: #{tourney_roster2.players.first.name}"
 end
-
-puts tourney_roster2.players&.first&.position == nil
