@@ -6,18 +6,18 @@ class Ticket
     @venue
   end
   def date=(date)
-    month, day, year = date.split("/")
-    if month.length == 2 && day.length == 2 && year.length == 2
+    year, month, day = date.split("-")
+    if year.length == 4 && month.length == 2 && day.length == 2
       @date = date
     else
-      puts "Please submit the date in the format 'mm/dd/yy'"
+      puts "Please submit the date in the format 'yyyy-mm-dd'"
     end
   end
   def date
     @date
   end
   def price=(amount)
-    if (amount *100).to_i == amount * 100
+    if (amount * 100).to_i == amount * 100
       @price = amount
     else
       puts "The price seems to be malformed."
@@ -31,13 +31,8 @@ class Ticket
   end
 end
 
-=begin
 ticket = Ticket.new("Town Hall")
-ticket.date = "11/12/1913"
+ticket.date = "1913-11-12"
 ticket.price = 63.00
-cc = Ticket.new("Convention Center", "12/13/14")
-puts "We've created two tickets."
-puts "The first is for a #{th.venue} event on #{th.date}."
-puts "The second is for an event on #{cc.date} at #{cc.venue}."
-puts "The ticket for #{th.venue} has been discounted 15% to #{th.discount(15)}.
-=end
+puts "The ticket is for an event on #{ticket.date} at #{ticket.venue}."
+puts "The ticket for #{ticket.venue} has been discounted 15% to #{ticket.discount(15)}."

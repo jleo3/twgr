@@ -19,10 +19,10 @@ class Ticket
 end
 
 puts Ticket::VENUES
-ng = Ticket.new("Home", "10/11/12")
-th = Ticket.new("Town Hall", "11/12/13")
-cc = Ticket.new("Convention Center", "12/13/14")
-fg = Ticket.new("Fairgrounds", "13/14/15")
+#ng = Ticket.new("Home", "2012-10-11") # uncommenting this line will throw an ArgumentError
+th = Ticket.new("Town Hall", "2013-11-12")
+cc = Ticket.new("Convention Center", "2014-12-13")
+fg = Ticket.new("Fairgrounds", "2015-02-14")
 th.price = 12.55
 cc.price = 10.00
 fg.price = 18.00
