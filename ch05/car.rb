@@ -34,4 +34,4 @@ puts "Counting cars of the same make as h2..."
 puts "There are #{h2.make_mates}."
 puts "Counting total cars..."
 puts "There are #{Car.total_count}."
-x = Car.new("Brand X")
+#x = Car.new("Brand X") # uncommenting this line will cause a RuntimeError

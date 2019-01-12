@@ -27,4 +27,4 @@ class Baker
   private :pour_flour, :add_egg, :stir_batter
 end
 b = Baker.new
-b.add_egg
+b.bake_cake
